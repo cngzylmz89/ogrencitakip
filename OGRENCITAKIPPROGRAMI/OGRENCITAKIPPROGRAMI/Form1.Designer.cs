@@ -36,7 +36,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lnkcikis = new System.Windows.Forms.LinkLabel();
             this.lnkogrkaydet = new System.Windows.Forms.LinkLabel();
-            this.lnkexcelaktar = new System.Windows.Forms.LinkLabel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
@@ -106,6 +105,7 @@
             this.btnuniform.Text = "ÜNİFORMA";
             this.btnuniform.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnuniform.UseVisualStyleBackColor = false;
+            this.btnuniform.Click += new System.EventHandler(this.btnuniform_Click);
             // 
             // btnizin
             // 
@@ -143,13 +143,12 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.lnkcikis, 2, 0);
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.lnkcikis, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lnkogrkaydet, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lnkexcelaktar, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -164,13 +163,14 @@
             this.lnkcikis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lnkcikis.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lnkcikis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lnkcikis.Location = new System.Drawing.Point(445, 0);
+            this.lnkcikis.Location = new System.Drawing.Point(334, 0);
             this.lnkcikis.Name = "lnkcikis";
-            this.lnkcikis.Size = new System.Drawing.Size(215, 36);
+            this.lnkcikis.Size = new System.Drawing.Size(326, 36);
             this.lnkcikis.TabIndex = 6;
             this.lnkcikis.TabStop = true;
             this.lnkcikis.Text = "Çıkış";
             this.lnkcikis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkcikis.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkcikis_LinkClicked);
             // 
             // lnkogrkaydet
             // 
@@ -181,26 +181,12 @@
             this.lnkogrkaydet.LinkColor = System.Drawing.Color.ForestGreen;
             this.lnkogrkaydet.Location = new System.Drawing.Point(3, 0);
             this.lnkogrkaydet.Name = "lnkogrkaydet";
-            this.lnkogrkaydet.Size = new System.Drawing.Size(215, 36);
+            this.lnkogrkaydet.Size = new System.Drawing.Size(325, 36);
             this.lnkogrkaydet.TabIndex = 3;
             this.lnkogrkaydet.TabStop = true;
             this.lnkogrkaydet.Text = "Öğrenci Kaydet";
             this.lnkogrkaydet.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lnkexcelaktar
-            // 
-            this.lnkexcelaktar.AutoSize = true;
-            this.lnkexcelaktar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lnkexcelaktar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lnkexcelaktar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lnkexcelaktar.LinkColor = System.Drawing.Color.Magenta;
-            this.lnkexcelaktar.Location = new System.Drawing.Point(224, 0);
-            this.lnkexcelaktar.Name = "lnkexcelaktar";
-            this.lnkexcelaktar.Size = new System.Drawing.Size(215, 36);
-            this.lnkexcelaktar.TabIndex = 2;
-            this.lnkexcelaktar.TabStop = true;
-            this.lnkexcelaktar.Text = "Excelden aktar";
-            this.lnkexcelaktar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lnkogrkaydet.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkogrkaydet_LinkClicked);
             // 
             // splitContainer2
             // 
@@ -317,7 +303,6 @@
         private System.Windows.Forms.Button btnuniform;
         private System.Windows.Forms.Button btnizin;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.LinkLabel lnkexcelaktar;
         private System.Windows.Forms.LinkLabel lnkcikis;
         private System.Windows.Forms.LinkLabel lnkogrkaydet;
         private System.Windows.Forms.SplitContainer splitContainer2;

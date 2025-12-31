@@ -80,5 +80,17 @@ namespace OGRENCITAKIPPROGRAMI
                 splitContainer2.Visible = true;
             }
         }
+
+        private void lblannenumara_Click(object sender, EventArgs e)
+        {
+            lblaranantelefon.Text = "";
+            lblaranantelefon.Text=lblannenumara.Text;
+        }
+
+        private void lblbabanumara_Click(object sender, EventArgs e)
+        {
+            lblaranantelefon.Text = "";
+            lblaranantelefon.Text=lblbabanumara.Text;
+        }
     }
 }

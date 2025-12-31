@@ -1,22 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\",
+  "WorkspaceRootPath": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\frmizin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|c:\\users\\win10\\desktop\\ceng\u0130z\\ogrencitakip\\ogrencitakipprogrami\\ogrencitakipprogrami\\frmizin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\frmizin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\frmizin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\frmizin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|c:\\users\\win10\\desktop\\ceng\u0130z\\okulev2\\ogrencitakipprogrami\\ogrencitakipprogrami\\frmuniforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\frmogrencikaydet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\frmogrencikaydet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\frmogrencikaydet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\frmogrencikaydet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\frmuniforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\frmuniforma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\frmtelefon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\frmtelefon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\frmtelefon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\frmtelefon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\ogrencitakipprogrami\\baglantisinif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B40E9A72-0956-4F10-B2A1-C2E5D5ABB725}|OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI.csproj|solutionrelative:ogrencitakipprogrami\\baglantisinif.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +50,99 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmizin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmizin.cs",
-              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\frmizin.cs",
-              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmizin.cs [Design]",
-              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\frmizin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T11:32:57.735Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmuniforma.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmuniforma.cs",
-              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\frmuniforma.cs",
-              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmuniforma.cs [Design]",
-              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\frmuniforma.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-28T11:32:23.688Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\Form1.cs",
-              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\Form1.cs",
-              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\Form1.cs",
-              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\Form1.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAiwDsAAAAAAAAAAAAAAA==",
+              "Title": "frmogrencikaydet.cs",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmogrencikaydet.cs",
+              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\frmogrencikaydet.cs",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmogrencikaydet.cs",
+              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\frmogrencikaydet.cs",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T07:27:52.306Z",
+              "WhenOpened": "2025-12-29T07:18:32.186Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\Form1.cs",
-              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\Form1.cs",
-              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\OKULEV2\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\Form1.cs [Design]",
-              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\Form1.cs [Design]",
+              "Title": "frmogrencikaydet.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmogrencikaydet.cs",
+              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\frmogrencikaydet.cs",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmogrencikaydet.cs [Design]",
+              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\frmogrencikaydet.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T07:22:01.102Z",
+              "WhenOpened": "2025-12-29T07:18:30.515Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmuniforma.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmuniforma.cs",
+              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\frmuniforma.cs",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmuniforma.cs [Design]",
+              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\frmuniforma.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T11:51:32.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmtelefon.cs",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmtelefon.cs",
+              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\frmtelefon.cs",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmtelefon.cs",
+              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\frmtelefon.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAUwFwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T10:02:13.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmtelefon.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmtelefon.cs",
+              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\frmtelefon.cs",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmtelefon.cs [Design]",
+              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\frmtelefon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T10:00:22.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmizin.cs",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmizin.cs",
+              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\frmizin.cs",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmizin.cs",
+              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\frmizin.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAuwPQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T10:13:38.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmizin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmizin.cs",
+              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\frmizin.cs",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\frmizin.cs [Design]",
+              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\frmizin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T10:12:35.539Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "baglantisinif.cs",
+              "DocumentMoniker": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\baglantisinif.cs",
+              "RelativeDocumentMoniker": "OGRENCITAKIPPROGRAMI\\baglantisinif.cs",
+              "ToolTip": "C:\\Users\\Win10\\Desktop\\CENG\u0130Z\\ogrencitakip\\OGRENCITAKIPPROGRAMI\\OGRENCITAKIPPROGRAMI\\baglantisinif.cs",
+              "RelativeToolTip": "OGRENCITAKIPPROGRAMI\\baglantisinif.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwoAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T09:23:20.924Z"
             }
           ]
         }

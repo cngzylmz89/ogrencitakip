@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="baglantisinif.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +73,12 @@
     </Compile>
     <Compile Include="frmizin.Designer.cs">
       <DependentUpon>frmizin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmogrencikaydet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmogrencikaydet.Designer.cs">
+      <DependentUpon>frmogrencikaydet.cs</DependentUpon>
     </Compile>
     <Compile Include="frmtelefon.cs">
       <SubType>Form</SubType>
@@ -92,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmizin.resx">
       <DependentUpon>frmizin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmogrencikaydet.resx">
+      <DependentUpon>frmogrencikaydet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmtelefon.resx">
       <DependentUpon>frmtelefon.cs</DependentUpon>
@@ -174,6 +184,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_Report_Card_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_list_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_available_updates_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_available_updates_100px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_available_updates_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

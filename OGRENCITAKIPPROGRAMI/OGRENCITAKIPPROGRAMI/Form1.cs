@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Runtime.InteropServices;
+using System.Data.OleDb;
 
 namespace OGRENCITAKIPPROGRAMI
 {
@@ -58,6 +59,23 @@ namespace OGRENCITAKIPPROGRAMI
             frmizin frm=new frmizin();
             frm.Show();
 
+        }
+
+        private void btnuniform_Click(object sender, EventArgs e)
+        {
+            frmuniforma frm = new frmuniforma();
+            frm.Show();
+        }
+
+        private void lnkogrkaydet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmogrencikaydet frm = new frmogrencikaydet();
+            frm.Show();
+        }
+
+        private void lnkcikis_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
