@@ -6,15 +6,19 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace OGRENCITAKIPPROGRAMI
 {
     public partial class frmizin : Form
     {
 
+        
         [DllImport("user32.dll")]
         private static extern bool ReleaseCapture();
 
@@ -66,13 +70,12 @@ namespace OGRENCITAKIPPROGRAMI
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void frmizin_Load(object sender, EventArgs e)
+        void listele()
         {
             OleDbConnection conn = new OleDbConnection(con.baglan);
             conn.Open();
-            
-            OleDbDataAdapter adapter = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI', OGRADSOYAD AS 'ADI SOYADI', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'İZİN TARİHİ', IZINOGRIZINMAZERET AS 'MAZERETİ', IZINOGRIZINALANKISI AS 'İZİN ALAN KİŞİ' FROM( (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER  JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF) ", conn);
+
+            OleDbDataAdapter adapter = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI', OGRADSOYAD AS 'ADI SOYADI', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'İZİN TARİHİ',IZINOGRIZINSAAT AS 'SAAT', IZINOGRIZINMAZERET AS 'MAZERETİ', IZINOGRIZINALANKISI AS 'İZİN ALAN KİŞİ' FROM( (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER  JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF) ", conn);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -84,36 +87,44 @@ namespace OGRENCITAKIPPROGRAMI
             OleDbDataAdapter daasilliste = new OleDbDataAdapter("select OGRID AS 'SIRA NUMARASI', OGRADSOYAD AS 'ADI SOYADI', OGRNUMARA AS 'NUMARASI', SINIFAD AS 'SINIFI',  OGRBABATELEFON AS 'BABA TELEFON', OGRANNETELEFON AS 'ANNE TELEFON', OGRSINIF FROM TBLOGRENCILER INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLOGRENCILER.OGRSINIF", conn);
             DataTable dt2 = new DataTable();
             daasilliste.Fill(dt2);
-            dataGridView3.DataSource= dt2;
-            dataGridView3.Columns["OGRSINIF"].Visible= false;
-            conn.Close() ;
+            dataGridView3.DataSource = dt2;
+            dataGridView3.Columns["OGRSINIF"].Visible = false;
+            conn.Close();
 
-            conn.Open() ;
+            conn.Open();
             OleDbDataAdapter dasinif = new OleDbDataAdapter("select SINIFID, SINIFAD FROM TBLSINIF", conn);
             DataTable dt3 = new DataTable();
             dasinif.Fill(dt3);
-            cmbsinif.DataSource= dt3;
+            cmbsinif.DataSource = dt3;
             cmbsinif.DisplayMember = "SINIFAD";
             cmbsinif.ValueMember = "SINIFID";
-            conn.Close () ;
+            conn.Close();
         }
 
         private void rchadsoyad_TextChanged(object sender, EventArgs e)
         {
+
             OleDbConnection conn = new OleDbConnection(con.baglan);
             conn.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("select OGRID AS 'SIRA NUMARASI', OGRADSOYAD AS 'ADI SOYADI', OGRNUMARA AS 'NUMARASI', SINIFAD AS 'SINIFI',  OGRBABATELEFON AS 'BABA TELEFON', OGRANNETELEFON AS 'ANNE TELEFON', OGRSINIF FROM TBLOGRENCILER INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLOGRENCILER.OGRSINIF WHERE OGRADSOYAD LIKE '"+rchadsoyad.Text+"%' ", conn);
+            OleDbDataAdapter da = new OleDbDataAdapter("select OGRID AS 'SIRA NUMARASI', OGRADSOYAD AS 'ADI SOYADI', OGRNUMARA AS 'NUMARASI', SINIFAD AS 'SINIFI',  OGRBABATELEFON AS 'BABA TELEFON', OGRANNETELEFON AS 'ANNE TELEFON', OGRSINIF FROM TBLOGRENCILER INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLOGRENCILER.OGRSINIF WHERE OGRADSOYAD LIKE '" + rchadsoyad.Text + "%' ", conn);
             DataTable dt2 = new DataTable();
             da.Fill(dt2);
-            dataGridView3.DataSource= dt2;
-            conn.Close( );
+            dataGridView3.DataSource = dt2;
+            conn.Close();
 
             conn.Open();
-            OleDbDataAdapter da2 = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI',OGRADSOYAD AS 'AD SOYAD', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'TARİH', IZINOGRIZINMAZERET AS 'MAZERET', IZINOGRIZINALANKISI AS 'ALAN KİŞİ' FROM (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF WHERE OGRADSOYAD LIKE '"+rchadsoyad.Text+"%' ", conn);
+            OleDbDataAdapter da2 = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI',OGRADSOYAD AS 'AD SOYAD', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'TARİH',IZINOGRIZINSAAT AS 'SAAT', IZINOGRIZINMAZERET AS 'MAZERET', IZINOGRIZINALANKISI AS 'ALAN KİŞİ' FROM (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF WHERE OGRADSOYAD LIKE '" + rchadsoyad.Text + "%' ", conn);
             DataTable dt3 = new DataTable();
             da2.Fill(dt3);
             dataGridView1.DataSource = dt3;
             conn.Close();
+        }
+        private void frmizin_Load(object sender, EventArgs e)
+        {
+
+            listele();
+
+           
         }
 
         private void cmbsinif_SelectedValueChanged(object sender, EventArgs e)
@@ -142,14 +153,14 @@ namespace OGRENCITAKIPPROGRAMI
             conn.Open();
             if (cmbsinif.Text == "TÜMÜ")
             {
-                OleDbDataAdapter da3 = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI',OGRADSOYAD AS 'AD SOYAD', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'TARİH', IZINOGRIZINMAZERET AS 'MAZERET', IZINOGRIZINALANKISI AS 'ALAN KİŞİ' FROM (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF", conn);
+                OleDbDataAdapter da3 = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI',OGRADSOYAD AS 'AD SOYAD', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'TARİH',IZINOGRIZINSAAT AS 'SAAT', IZINOGRIZINMAZERET AS 'MAZERET', IZINOGRIZINALANKISI AS 'ALAN KİŞİ' FROM (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF", conn);
                 DataTable dt3 = new DataTable();
                 da3.Fill(dt3);
                 dataGridView1.DataSource = dt3;
             }
             else
             {
-                OleDbDataAdapter da2 = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI',OGRADSOYAD AS 'AD SOYAD', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'TARİH', IZINOGRIZINMAZERET AS 'MAZERET', IZINOGRIZINALANKISI AS 'ALAN KİŞİ' FROM (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF WHERE SINIFAD LIKE '" + cmbsinif.Text + "%' ", conn);
+                OleDbDataAdapter da2 = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI',OGRADSOYAD AS 'AD SOYAD', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI',  IZINOGRIZINTARIH AS 'TARİH',  IZINOGRIZINSAAT AS 'SAAT', IZINOGRIZINMAZERET AS 'MAZERET', IZINOGRIZINALANKISI AS 'ALAN KİŞİ' FROM (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF WHERE SINIFAD LIKE '" + cmbsinif.Text + "%' ", conn);
                 DataTable dt3 = new DataTable();
                 da2.Fill(dt3);
                 dataGridView1.DataSource = dt3;
@@ -172,7 +183,7 @@ namespace OGRENCITAKIPPROGRAMI
             conn.Close();
 
             conn.Open();
-            OleDbDataAdapter da2 = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI',OGRADSOYAD AS 'AD SOYAD', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'TARİH', IZINOGRIZINMAZERET AS 'MAZERET', IZINOGRIZINALANKISI AS 'ALAN KİŞİ' FROM (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF WHERE IZINOGRNUMARA LIKE '" + rchnumara.Text + "%' ", conn);
+            OleDbDataAdapter da2 = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI',OGRADSOYAD AS 'AD SOYAD', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'TARİH', IZINOGRIZINSAAT AS 'SAAT', IZINOGRIZINMAZERET AS 'MAZERET', IZINOGRIZINALANKISI AS 'ALAN KİŞİ' FROM (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF WHERE IZINOGRNUMARA LIKE '" + rchnumara.Text + "%' ", conn);
             DataTable dt3 = new DataTable();
             da2.Fill(dt3);
             dataGridView1.DataSource = dt3;
@@ -210,7 +221,7 @@ namespace OGRENCITAKIPPROGRAMI
                 MessageBox.Show(hata.ToString());
             }
         }
-
+        public int ogrenciıd;
         void bilgigetir()
         {
             OleDbConnection conn = new OleDbConnection(con.baglan);
@@ -241,14 +252,77 @@ namespace OGRENCITAKIPPROGRAMI
             conn.Close();
 
             conn.Open ();
-
-
+            OleDbCommand komutoku3 = new OleDbCommand("select OGRBABATELEFON FROM TBLOGRENCILER WHERE OGRNUMARA=@N1", conn);
+            komutoku3.Parameters.AddWithValue("@N1", numara);
+            OleDbDataReader komutoku3rd = komutoku3.ExecuteReader();
+            if (lblnumarasi.Text != "")
+            {
+                while (komutoku3rd.Read())
+                {
+                    lblbabatelefon.Text=komutoku3rd[0].ToString();
+                }
+            }
             conn.Close ();
+            conn.Open();
+            OleDbCommand komutoku4 = new OleDbCommand("select OGRANNETELEFON FROM TBLOGRENCILER WHERE OGRNUMARA=@N1", conn);
+            komutoku4.Parameters.AddWithValue("@N1", numara);
+            OleDbDataReader komutoku4rd = komutoku4.ExecuteReader();
+            if (lblnumarasi.Text != "")
+            {
+                while (komutoku4rd.Read())
+                {
+                    lblannetelefon.Text = komutoku4rd[0].ToString();
+                }
+            }
+            conn.Close();
+
+            conn.Open();
+            OleDbCommand komutoku5 = new OleDbCommand("select OGRID, OGRSINIF FROM TBLOGRENCILER WHERE OGRNUMARA=@N1", conn);
+            komutoku5.Parameters.AddWithValue("@N1", numara);
+            OleDbDataReader komutoku5rd = komutoku5.ExecuteReader();
+            if (lblnumarasi.Text != "")
+            {
+                while (komutoku5rd.Read())
+                {
+                    ogrenciıd =int.Parse( komutoku5rd[0].ToString());
+                    ogrsinif=int.Parse(komutoku5rd [1].ToString());
+                }
+            }
+            conn.Close();
         }
         public int numara;
+        public int ogrsinif;
         private void lblnumarasi_TextChanged(object sender, EventArgs e)
         {
             numara=int.Parse(lblnumarasi.Text);
+            bilgigetir();
+        }
+
+        private void btnizinkaydet_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conn = new OleDbConnection(con.baglan);
+            conn.Open();
+            OleDbCommand komutizinkaydet = new OleDbCommand("insert into TBLIZIN (IZINOGRADSOYAD, IZINOGRSINIF, IZINOGRNUMARA, IZINOGRIZINTARIH, IZINOGRIZINSAAT, IZINOGRIZINMAZERET, IZINOGRIZINALANKISI) VALUES (@P1, @P2, @P3, @P4,@S1, @P5, @P6)", conn);
+            komutizinkaydet.Parameters.AddWithValue("@P1", ogrenciıd);
+            komutizinkaydet.Parameters.AddWithValue("@P2",ogrsinif);
+            komutizinkaydet.Parameters.AddWithValue("@P3", lblnumarasi.Text);
+            komutizinkaydet.Parameters.AddWithValue("@P4", DateTime.Now.ToString("HH:mm"));
+            komutizinkaydet.Parameters.AddWithValue("@S1", DateTime.Now.ToString("dd.MM.yyyy"));
+            komutizinkaydet.Parameters.AddWithValue("@P5", rchmazeret.Text);
+            komutizinkaydet.Parameters.AddWithValue("@P6", rchogrencialankisi.Text);
+            if (lblnumarasi.Text != "")
+            {
+                komutizinkaydet.ExecuteNonQuery();
+                MessageBox.Show("İZİN KAYDEDİLDİ");
+                listele();
+                
+            }
+            else
+            {
+                MessageBox.Show("Lütfen tablodan öğrenci seçiniz.");
+            }
+
+                conn.Close();
         }
     }
 }
