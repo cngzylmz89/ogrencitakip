@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OgrenciTakipDatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OgrenciTakipDatabaseConnectionString (Settings)" PropertyReference="ApplicationSettings.OGRENCITAKIPPROGRAMI.Properties.Settings.GlobalReference.Default.OgrenciTakipDatabaseConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OgrenciTakipDatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="listele" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="listele" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="listele">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TBLIZIN.ID, TBLOGRENCILER.OGRADSOYAD, TBLSINIF.SINIFAD, TBLIZIN.IZINOGRNUMARA, TBLIZIN.IZINOGRIZINTARIH, TBLIZIN.IZINOGRIZINSAAT, TBLIZIN.IZINOGRIZINMAZERET, TBLIZIN.IZINOGRIZINALANKISI
+FROM            ((TBLIZIN INNER JOIN
+                         TBLOGRENCILER ON TBLIZIN.IZINOGRADSOYAD = TBLOGRENCILER.OGRID) INNER JOIN
+                         TBLSINIF ON TBLIZIN.IZINOGRSINIF = TBLSINIF.SINIFID AND TBLOGRENCILER.OGRSINIF = TBLSINIF.SINIFID)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="OGRADSOYAD" DataSetColumn="OGRADSOYAD" />
+              <Mapping SourceColumn="SINIFAD" DataSetColumn="SINIFAD" />
+              <Mapping SourceColumn="IZINOGRNUMARA" DataSetColumn="IZINOGRNUMARA" />
+              <Mapping SourceColumn="IZINOGRIZINTARIH" DataSetColumn="IZINOGRIZINTARIH" />
+              <Mapping SourceColumn="IZINOGRIZINSAAT" DataSetColumn="IZINOGRIZINSAAT" />
+              <Mapping SourceColumn="IZINOGRIZINMAZERET" DataSetColumn="IZINOGRIZINMAZERET" />
+              <Mapping SourceColumn="IZINOGRIZINALANKISI" DataSetColumn="IZINOGRIZINALANKISI" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="OGRADSOYAD" msprop:Generator_ColumnPropNameInRow="OGRADSOYAD" msprop:Generator_ColumnPropNameInTable="OGRADSOYADColumn" msprop:Generator_ColumnVarNameInTable="columnOGRADSOYAD" msprop:Generator_UserColumnName="OGRADSOYAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SINIFAD" msprop:Generator_ColumnPropNameInRow="SINIFAD" msprop:Generator_ColumnPropNameInTable="SINIFADColumn" msprop:Generator_ColumnVarNameInTable="columnSINIFAD" msprop:Generator_UserColumnName="SINIFAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IZINOGRNUMARA" msprop:Generator_ColumnPropNameInRow="IZINOGRNUMARA" msprop:Generator_ColumnPropNameInTable="IZINOGRNUMARAColumn" msprop:Generator_ColumnVarNameInTable="columnIZINOGRNUMARA" msprop:Generator_UserColumnName="IZINOGRNUMARA" type="xs:int" minOccurs="0" />
+              <xs:element name="IZINOGRIZINTARIH" msprop:Generator_ColumnPropNameInRow="IZINOGRIZINTARIH" msprop:Generator_ColumnPropNameInTable="IZINOGRIZINTARIHColumn" msprop:Generator_ColumnVarNameInTable="columnIZINOGRIZINTARIH" msprop:Generator_UserColumnName="IZINOGRIZINTARIH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IZINOGRIZINSAAT" msprop:Generator_ColumnPropNameInRow="IZINOGRIZINSAAT" msprop:Generator_ColumnPropNameInTable="IZINOGRIZINSAATColumn" msprop:Generator_ColumnVarNameInTable="columnIZINOGRIZINSAAT" msprop:Generator_UserColumnName="IZINOGRIZINSAAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IZINOGRIZINMAZERET" msprop:Generator_ColumnPropNameInRow="IZINOGRIZINMAZERET" msprop:Generator_ColumnPropNameInTable="IZINOGRIZINMAZERETColumn" msprop:Generator_ColumnVarNameInTable="columnIZINOGRIZINMAZERET" msprop:Generator_UserColumnName="IZINOGRIZINMAZERET" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IZINOGRIZINALANKISI" msprop:Generator_ColumnPropNameInRow="IZINOGRIZINALANKISI" msprop:Generator_ColumnPropNameInTable="IZINOGRIZINALANKISIColumn" msprop:Generator_ColumnVarNameInTable="columnIZINOGRIZINALANKISI" msprop:Generator_UserColumnName="IZINOGRIZINALANKISI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

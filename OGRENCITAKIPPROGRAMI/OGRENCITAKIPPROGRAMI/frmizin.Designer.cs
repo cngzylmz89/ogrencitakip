@@ -805,6 +805,7 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(197, 20);
             this.dateTimePicker1.TabIndex = 16;
             this.dateTimePicker1.Value = new System.DateTime(2025, 11, 28, 14, 2, 7, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // splitContainer8
             // 
@@ -856,6 +857,7 @@
             this.button3.Text = "RAPOR AL";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnizinkaydet
             // 

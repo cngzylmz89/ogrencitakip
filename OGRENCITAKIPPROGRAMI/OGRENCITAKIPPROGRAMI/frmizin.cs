@@ -70,6 +70,8 @@ namespace OGRENCITAKIPPROGRAMI
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        //DATAGRİDDE LİSTELEME YAPAR
         void listele()
         {
             OleDbConnection conn = new OleDbConnection(con.baglan);
@@ -100,7 +102,7 @@ namespace OGRENCITAKIPPROGRAMI
             cmbsinif.ValueMember = "SINIFID";
             conn.Close();
         }
-
+        
         private void rchadsoyad_TextChanged(object sender, EventArgs e)
         {
 
@@ -302,12 +304,12 @@ namespace OGRENCITAKIPPROGRAMI
         {
             OleDbConnection conn = new OleDbConnection(con.baglan);
             conn.Open();
-            OleDbCommand komutizinkaydet = new OleDbCommand("insert into TBLIZIN (IZINOGRADSOYAD, IZINOGRSINIF, IZINOGRNUMARA, IZINOGRIZINTARIH, IZINOGRIZINSAAT, IZINOGRIZINMAZERET, IZINOGRIZINALANKISI) VALUES (@P1, @P2, @P3, @P4,@S1, @P5, @P6)", conn);
+            OleDbCommand komutizinkaydet = new OleDbCommand("insert into TBLIZIN (IZINOGRADSOYAD, IZINOGRSINIF, IZINOGRNUMARA, IZINOGRIZINTARIH, IZINOGRIZINSAAT, IZINOGRIZINMAZERET, IZINOGRIZINALANKISI) VALUES (@P1, @P2, @P3, @S1,@P4, @P5, @P6)", conn);
             komutizinkaydet.Parameters.AddWithValue("@P1", ogrenciıd);
             komutizinkaydet.Parameters.AddWithValue("@P2",ogrsinif);
             komutizinkaydet.Parameters.AddWithValue("@P3", lblnumarasi.Text);
-            komutizinkaydet.Parameters.AddWithValue("@P4", DateTime.Now.ToString("HH:mm"));
             komutizinkaydet.Parameters.AddWithValue("@S1", DateTime.Now.ToString("dd.MM.yyyy"));
+            komutizinkaydet.Parameters.AddWithValue("@P4", DateTime.Now.ToString("HH:mm"));
             komutizinkaydet.Parameters.AddWithValue("@P5", rchmazeret.Text);
             komutizinkaydet.Parameters.AddWithValue("@P6", rchogrencialankisi.Text);
             if (lblnumarasi.Text != "")
@@ -323,6 +325,24 @@ namespace OGRENCITAKIPPROGRAMI
             }
 
                 conn.Close();
+        }
+        string tarih;
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            tarih=dateTimePicker1.Value.ToString("dd.MM.yyyy");
+            OleDbConnection conn = new OleDbConnection(con.baglan);
+            conn.Open();
+            OleDbDataAdapter da2 = new OleDbDataAdapter("select ID AS 'SIRA NUMARASI',OGRADSOYAD AS 'AD SOYAD', SINIFAD AS 'SINIFI', IZINOGRNUMARA AS 'NUMARASI', IZINOGRIZINTARIH AS 'TARİH', IZINOGRIZINSAAT AS 'SAAT', IZINOGRIZINMAZERET AS 'MAZERET', IZINOGRIZINALANKISI AS 'ALAN KİŞİ' FROM (TBLIZIN INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLIZIN.IZINOGRADSOYAD) INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLIZIN.IZINOGRSINIF WHERE IZINOGRIZINTARIH LIKE '" + tarih + "%' ", conn);
+            DataTable dt3 = new DataTable();
+            da2.Fill(dt3);
+            dataGridView1.DataSource = dt3;
+            conn.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmizinreport frmizinreport = new frmizinreport();
+            frmizinreport.Show();
         }
     }
 }
