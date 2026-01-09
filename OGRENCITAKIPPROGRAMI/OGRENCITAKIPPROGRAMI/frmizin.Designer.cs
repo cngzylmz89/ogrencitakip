@@ -337,6 +337,7 @@
             this.pckbxogrenci.Margin = new System.Windows.Forms.Padding(0);
             this.pckbxogrenci.Name = "pckbxogrenci";
             this.pckbxogrenci.Size = new System.Drawing.Size(370, 295);
+            this.pckbxogrenci.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pckbxogrenci.TabIndex = 0;
             this.pckbxogrenci.TabStop = false;
             // 
@@ -474,7 +475,7 @@
             this.lblannetelefon.AutoSize = true;
             this.lblannetelefon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblannetelefon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblannetelefon.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblannetelefon.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblannetelefon.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblannetelefon.Location = new System.Drawing.Point(361, 388);
             this.lblannetelefon.Name = "lblannetelefon";
@@ -501,7 +502,7 @@
             this.lblensonizintarihi.AutoSize = true;
             this.lblensonizintarihi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblensonizintarihi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblensonizintarihi.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblensonizintarihi.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblensonizintarihi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblensonizintarihi.Location = new System.Drawing.Point(361, 129);
             this.lblensonizintarihi.Name = "lblensonizintarihi";
@@ -528,7 +529,7 @@
             this.lblizinsayisi.AutoSize = true;
             this.lblizinsayisi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblizinsayisi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblizinsayisi.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblizinsayisi.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblizinsayisi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblizinsayisi.Location = new System.Drawing.Point(361, 0);
             this.lblizinsayisi.Name = "lblizinsayisi";
@@ -569,7 +570,7 @@
             this.lblbabatelefon.AutoSize = true;
             this.lblbabatelefon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblbabatelefon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblbabatelefon.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblbabatelefon.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblbabatelefon.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblbabatelefon.Location = new System.Drawing.Point(361, 259);
             this.lblbabatelefon.Name = "lblbabatelefon";

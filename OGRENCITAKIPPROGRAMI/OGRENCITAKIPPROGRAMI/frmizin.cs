@@ -105,7 +105,7 @@ namespace OGRENCITAKIPPROGRAMI
         
         private void rchadsoyad_TextChanged(object sender, EventArgs e)
         {
-
+            rchadsoyad.Text.ToUpper();
             OleDbConnection conn = new OleDbConnection(con.baglan);
             conn.Open();
             OleDbDataAdapter da = new OleDbDataAdapter("select OGRID AS 'SIRA NUMARASI', OGRADSOYAD AS 'ADI SOYADI', OGRNUMARA AS 'NUMARASI', SINIFAD AS 'SINIFI',  OGRBABATELEFON AS 'BABA TELEFON', OGRANNETELEFON AS 'ANNE TELEFON', OGRSINIF FROM TBLOGRENCILER INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLOGRENCILER.OGRSINIF WHERE OGRADSOYAD LIKE '" + rchadsoyad.Text + "%' ", conn);
@@ -226,7 +226,28 @@ namespace OGRENCITAKIPPROGRAMI
         public int ogrenciıd;
         void bilgigetir()
         {
+           
+            lblizinsayisi.Text = "";
+            lblensonizintarihi.Text = "";
+            lblbabatelefon.Text = "";
+            lblannetelefon.Text = "";
             OleDbConnection conn = new OleDbConnection(con.baglan);
+
+            conn.Open();
+            OleDbCommand komutokupic = new OleDbCommand("select  OGRFOTOGRAFYOL from TBLOGRENCILER WHERE OGRNUMARA=@P1", conn);
+            komutokupic.Parameters.AddWithValue("@P1", numara);
+            OleDbDataReader komutokupicrd = komutokupic.ExecuteReader();
+            if (lblnumarasi.Text != "")
+            {
+                while (komutokupicrd.Read())
+                {
+                    pckbxogrenci.ImageLocation = komutokupicrd[0].ToString();
+                }
+            }
+            conn.Close();
+
+            
+
             conn.Open();
             OleDbCommand komutoku1 = new OleDbCommand("select  count(*) from TBLIZIN WHERE IZINOGRNUMARA=@P1", conn);
             komutoku1.Parameters.AddWithValue("@P1", numara);
