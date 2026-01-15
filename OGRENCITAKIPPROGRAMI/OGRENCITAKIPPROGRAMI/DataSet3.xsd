@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet3" targetNamespace="http://tempuri.org/DataSet3.xsd" xmlns:mstns="http://tempuri.org/DataSet3.xsd" xmlns="http://tempuri.org/DataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OgrenciTakipDatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OgrenciTakipDatabaseConnectionString (Settings)" PropertyReference="ApplicationSettings.OGRENCITAKIPPROGRAMI.Properties.Settings.GlobalReference.Default.OgrenciTakipDatabaseConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OgrenciTakipDatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="UNILISTELE" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="UNILISTELE" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="UNILISTELE">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TBLUNIFORMA.UNIID, TBLOGRENCILER.OGRADSOYAD, TBLUNIFORMA.OGRNUMARAUNI, TBLSINIF.SINIFAD, TBLUNIFORMA.OGRTARIHUNI, TBLUNIFORMA.OGRMAZERETUNI
+FROM            ((TBLUNIFORMA INNER JOIN
+                         TBLOGRENCILER ON TBLUNIFORMA.OGRADSOYADUNI = TBLOGRENCILER.OGRID) INNER JOIN
+                         TBLSINIF ON TBLUNIFORMA.OGRSINIFUNI = TBLSINIF.SINIFID AND TBLOGRENCILER.OGRSINIF = TBLSINIF.SINIFID)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UNIID" DataSetColumn="UNIID" />
+              <Mapping SourceColumn="OGRADSOYAD" DataSetColumn="OGRADSOYAD" />
+              <Mapping SourceColumn="OGRNUMARAUNI" DataSetColumn="OGRNUMARAUNI" />
+              <Mapping SourceColumn="SINIFAD" DataSetColumn="SINIFAD" />
+              <Mapping SourceColumn="OGRTARIHUNI" DataSetColumn="OGRTARIHUNI" />
+              <Mapping SourceColumn="OGRMAZERETUNI" DataSetColumn="OGRMAZERETUNI" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet3" msprop:Generator_DataSetName="DataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UNIID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="UNIID" msprop:Generator_ColumnPropNameInTable="UNIIDColumn" msprop:Generator_ColumnVarNameInTable="columnUNIID" msprop:Generator_UserColumnName="UNIID" type="xs:int" minOccurs="0" />
+              <xs:element name="OGRADSOYAD" msprop:Generator_ColumnPropNameInRow="OGRADSOYAD" msprop:Generator_ColumnPropNameInTable="OGRADSOYADColumn" msprop:Generator_ColumnVarNameInTable="columnOGRADSOYAD" msprop:Generator_UserColumnName="OGRADSOYAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OGRNUMARAUNI" msprop:Generator_ColumnPropNameInRow="OGRNUMARAUNI" msprop:Generator_ColumnPropNameInTable="OGRNUMARAUNIColumn" msprop:Generator_ColumnVarNameInTable="columnOGRNUMARAUNI" msprop:Generator_UserColumnName="OGRNUMARAUNI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SINIFAD" msprop:Generator_ColumnPropNameInRow="SINIFAD" msprop:Generator_ColumnPropNameInTable="SINIFADColumn" msprop:Generator_ColumnVarNameInTable="columnSINIFAD" msprop:Generator_UserColumnName="SINIFAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OGRTARIHUNI" msprop:Generator_ColumnPropNameInRow="OGRTARIHUNI" msprop:Generator_ColumnPropNameInTable="OGRTARIHUNIColumn" msprop:Generator_ColumnVarNameInTable="columnOGRTARIHUNI" msprop:Generator_UserColumnName="OGRTARIHUNI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OGRMAZERETUNI" msprop:Generator_ColumnPropNameInRow="OGRMAZERETUNI" msprop:Generator_ColumnPropNameInTable="OGRMAZERETUNIColumn" msprop:Generator_ColumnVarNameInTable="columnOGRMAZERETUNI" msprop:Generator_UserColumnName="OGRMAZERETUNI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

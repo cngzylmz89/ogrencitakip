@@ -132,7 +132,7 @@ namespace OGRENCITAKIPPROGRAMI
             rchadsoyad.Text.ToUpper();
             OleDbConnection conn = new OleDbConnection(con.baglan);
             conn.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT TELID AS 'ID', OGRADSOYAD  AS 'AD SOYAD', OGRNUMARATELEFON AS 'NUMARASI', SINIFAD AS 'SINIFI', OGRTARIHTELEFON AS 'TARİH', OGRMAZERETTELEFON AS 'MAZERETİ' FROM (TBLTELEFONKAYIT  INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLTELEFONKAYIT.OGRADSOYADTELEFON)  INNER JOIN TBLSINIF ON TBLTELEFONKAYIT.OGRSINIFTELEFON=TBLSINIF.SINIFID WHERE OGRADSOYAD LIKE '" + rchadsoyad.Text + "%' ", conn);
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT TELID AS 'ID', OGRADSOYAD  AS 'AD SOYAD', OGRNUMARATELEFON AS 'NUMARASI', SINIFAD AS 'SINIFI', OGRTARIHTELEFON AS 'TARİH', OGRSAATTELEFON AS 'SAAT', OGRMAZERETTELEFON AS 'MAZERETİ' FROM (TBLTELEFONKAYIT  INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLTELEFONKAYIT.OGRADSOYADTELEFON)  INNER JOIN TBLSINIF ON TBLTELEFONKAYIT.OGRSINIFTELEFON=TBLSINIF.SINIFID WHERE OGRADSOYAD LIKE '" + rchadsoyad.Text + "%' ", conn);
             DataTable dt2 = new DataTable();
             da.Fill(dt2);
             dataGridView2.DataSource = dt2;
@@ -150,7 +150,7 @@ namespace OGRENCITAKIPPROGRAMI
         {
             OleDbConnection conn = new OleDbConnection(con.baglan);
             conn.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT TELID AS 'ID', OGRADSOYAD  AS 'AD SOYAD', OGRNUMARATELEFON AS 'NUMARASI', SINIFAD AS 'SINIFI', OGRTARIHTELEFON AS 'TARİH', OGRMAZERETTELEFON AS 'MAZERETİ' FROM (TBLTELEFONKAYIT  INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLTELEFONKAYIT.OGRADSOYADTELEFON)  INNER JOIN TBLSINIF ON TBLTELEFONKAYIT.OGRSINIFTELEFON=TBLSINIF.SINIFID WHERE OGRSINIF LIKE '" + cmbsinif.SelectedValue+ "%' ", conn);
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT TELID AS 'ID', OGRADSOYAD  AS 'AD SOYAD', OGRNUMARATELEFON AS 'NUMARASI', SINIFAD AS 'SINIFI', OGRTARIHTELEFON AS 'TARİH',OGRSAATTELEFON AS 'SAAT', OGRMAZERETTELEFON AS 'MAZERETİ' FROM (TBLTELEFONKAYIT  INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLTELEFONKAYIT.OGRADSOYADTELEFON)  INNER JOIN TBLSINIF ON TBLTELEFONKAYIT.OGRSINIFTELEFON=TBLSINIF.SINIFID WHERE OGRSINIF LIKE '" + cmbsinif.SelectedValue+ "%' ", conn);
             DataTable dt2 = new DataTable();
             da.Fill(dt2);
             dataGridView2.DataSource = dt2;
@@ -168,7 +168,7 @@ namespace OGRENCITAKIPPROGRAMI
         {
             OleDbConnection conn = new OleDbConnection(con.baglan);
             conn.Open();
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT TELID AS 'ID', OGRADSOYAD  AS 'AD SOYAD', OGRNUMARATELEFON AS 'NUMARASI', SINIFAD AS 'SINIFI', OGRTARIHTELEFON AS 'TARİH', OGRMAZERETTELEFON AS 'MAZERETİ' FROM (TBLTELEFONKAYIT  INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLTELEFONKAYIT.OGRADSOYADTELEFON)  INNER JOIN TBLSINIF ON TBLTELEFONKAYIT.OGRSINIFTELEFON=TBLSINIF.SINIFID WHERE OGRNUMARATELEFON LIKE '" + rchnumara.Text + "%' ", conn);
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT TELID AS 'ID', OGRADSOYAD  AS 'AD SOYAD', OGRNUMARATELEFON AS 'NUMARASI', SINIFAD AS 'SINIFI', OGRTARIHTELEFON AS 'TARİH',OGRSAATTELEFON AS 'SAAT', OGRMAZERETTELEFON AS 'MAZERETİ' FROM (TBLTELEFONKAYIT  INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLTELEFONKAYIT.OGRADSOYADTELEFON)  INNER JOIN TBLSINIF ON TBLTELEFONKAYIT.OGRSINIFTELEFON=TBLSINIF.SINIFID WHERE OGRNUMARATELEFON LIKE '" + rchnumara.Text + "%' ", conn);
             DataTable dt2 = new DataTable();
             da.Fill(dt2);
             dataGridView2.DataSource = dt2;
@@ -217,7 +217,7 @@ namespace OGRENCITAKIPPROGRAMI
             }
         }
 
-        public int ogrenciıd;
+        public int ogrenciid;
         void bilgigetir()
         {
 
@@ -277,7 +277,7 @@ namespace OGRENCITAKIPPROGRAMI
             {
                 while (komutoku5rd.Read())
                 {
-                    ogrenciıd = int.Parse(komutoku5rd[0].ToString());
+                    ogrenciid = int.Parse(komutoku5rd[0].ToString());
                     ogrsinif = int.Parse(komutoku5rd[1].ToString());
                 }
             }
@@ -290,6 +290,52 @@ namespace OGRENCITAKIPPROGRAMI
         {
             numara = int.Parse(lblnumarasi.Text);
             bilgigetir();
+        }
+
+        private void btntelefonaramakaydet_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conn = new OleDbConnection(con.baglan);
+            conn.Open();
+            OleDbCommand komuttelefonkaydet = new OleDbCommand("insert into TBLTELEFONKAYIT  (OGRADSOYADTELEFON,OGRNUMARATELEFON,OGRSINIFTELEFON, OGRTARIHTELEFON, OGRSAATTELEFON, OGRMAZERETTELEFON) VALUES (@P1, @P2, @P3, @P4,@S1, @P5, )", conn);
+            komuttelefonkaydet.Parameters.AddWithValue("@P1", ogrenciid);
+            komuttelefonkaydet.Parameters.AddWithValue("@P2", lblnumarasi.Text);
+            komuttelefonkaydet.Parameters.AddWithValue("@P3",ogrsinif);
+            komuttelefonkaydet.Parameters.AddWithValue("@P4", DateTime.Now.ToString("dd.MM.yyyy"));
+            komuttelefonkaydet.Parameters.AddWithValue("@S1", DateTime.Now.ToString("HH.mm"));
+            komuttelefonkaydet.Parameters.AddWithValue("@P5", rchmazeret.Text);
+
+            if (lblnumarasi.Text != "")
+            {
+                komuttelefonkaydet.ExecuteNonQuery();
+                MessageBox.Show("Telefon araması kaydedildi.");
+                listele();
+
+            }
+            else
+            {
+                MessageBox.Show("Lütfen tablodan öğrenci seciniz");
+            }
+                conn.Close();
+        }
+        
+        private void btnara_Click(object sender, EventArgs e)
+        {
+            frmizinreport frmizinreport = new frmizinreport();
+            frmizinreport.rol = "TELEFON";
+            frmizinreport.Show();
+        }
+
+        private void dtptarih_ValueChanged(object sender, EventArgs e)
+        {
+            OleDbConnection conn = new OleDbConnection(con.baglan);
+            conn.Open();
+            OleDbDataAdapter da = new OleDbDataAdapter("SELECT TELID AS 'ID', OGRADSOYAD  AS 'AD SOYAD', OGRNUMARATELEFON AS 'NUMARASI', SINIFAD AS 'SINIFI', OGRTARIHTELEFON AS 'TARİH',OGRSAATTELEFON AS 'SAAT', OGRMAZERETTELEFON AS 'MAZERETİ' FROM (TBLTELEFONKAYIT  INNER JOIN TBLOGRENCILER ON TBLOGRENCILER.OGRID=TBLTELEFONKAYIT.OGRADSOYADTELEFON)  INNER JOIN TBLSINIF ON TBLTELEFONKAYIT.OGRSINIFTELEFON=TBLSINIF.SINIFID WHERE OGRTARIHTELEFON LIKE '" + dtptarih.Value + "%' ", conn);
+            DataTable dt2 = new DataTable();
+            da.Fill(dt2);
+            dataGridView2.DataSource = dt2;
+            conn.Close();
+
+           ;
         }
     }
 }

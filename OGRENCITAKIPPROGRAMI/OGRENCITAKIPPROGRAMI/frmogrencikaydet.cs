@@ -74,7 +74,7 @@ namespace OGRENCITAKIPPROGRAMI
         {
             OleDbConnection conn = new OleDbConnection(con.baglan);
             conn.Open();
-            OleDbCommand komutlistele = new OleDbCommand("SELECT  OGRID AS 'ID', OGRADSOYAD AS 'ADI SOYADI',SINIFAD AS 'SINIFI', SINIFID AS 'SINIFNO', OGRNUMARA AS 'NUMARASI',OGRBABATELEFON AS 'BABA TELEFON', OGRANNETELEFON AS 'ANNE TELEFON' from TBLOGRENCILER INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLOGRENCILER.OGRSINIF", conn);
+            OleDbCommand komutlistele = new OleDbCommand("SELECT  OGRID AS 'ID', OGRADSOYAD AS 'ADI SOYADI',SINIFAD AS 'SINIFI', OGRSINIF, OGRNUMARA AS 'NUMARASI',OGRBABATELEFON AS 'BABA TELEFON', OGRANNETELEFON AS 'ANNE TELEFON' from TBLOGRENCILER INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLOGRENCILER.OGRSINIF", conn);
 
             OleDbDataAdapter da = new OleDbDataAdapter(komutlistele);
             DataTable dt = new DataTable();
@@ -188,12 +188,13 @@ namespace OGRENCITAKIPPROGRAMI
         {
             try
             {
+                mskıd.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 rchadsoyad.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                cmbsinif.SelectedValue = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                cmbsinif.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 msknumara.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
                 mskbabatelefon.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
                 mskannetelefon.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-                mskıd.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                
 
             }
             catch (Exception)
@@ -255,8 +256,8 @@ namespace OGRENCITAKIPPROGRAMI
         {
             mskbabatelefon.SelectionStart = mskbabatelefon.Text.Length;
         }
-       
-        private void rchadsoyad_TextChanged(object sender, EventArgs e)
+
+        private void btnogrenciara_Click(object sender, EventArgs e)
         {
             dataGridView1.Columns.Clear();
             OleDbConnection conn = new OleDbConnection(con.baglan);
@@ -267,34 +268,13 @@ namespace OGRENCITAKIPPROGRAMI
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             conn.Close();
-            
         }
 
-        private void msknumara_TextChanged(object sender, EventArgs e)
+        private void btnraporal_Click(object sender, EventArgs e)
         {
-            dataGridView1.Columns.Clear();
-            OleDbConnection conn = new OleDbConnection(con.baglan);
-            conn.Open();
-            OleDbCommand ogrenciara = new OleDbCommand("SELECT  OGRID AS 'ID', OGRADSOYAD AS 'ADI SOYADI',SINIFAD AS 'SINIFI', SINIFID AS 'SINIFNO', OGRNUMARA AS 'NUMARASI',OGRBABATELEFON AS 'BABA TELEFON', OGRANNETELEFON AS 'ANNE TELEFON' from TBLOGRENCILER INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLOGRENCILER.OGRSINIF WHERE OGRNUMARA like '" +msknumara.Text+ "%' ", conn);
-            OleDbDataAdapter da = new OleDbDataAdapter(ogrenciara);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            conn.Close();
-
-        }
-
-        private void cmbsinif_SelectedValueChanged(object sender, EventArgs e)
-        {
-            dataGridView1.Columns.Clear();
-            OleDbConnection conn = new OleDbConnection(con.baglan);
-            conn.Open();
-            OleDbCommand ogrenciara = new OleDbCommand("SELECT OGRID AS 'ID', OGRADSOYAD AS 'ADI SOYADI',SINIFAD AS 'SINIFI', SINIFID AS 'SINIFNO', OGRNUMARA AS 'NUMARASI',OGRBABATELEFON AS 'BABA TELEFON', OGRANNETELEFON AS 'ANNE TELEFON' from TBLOGRENCILER INNER JOIN TBLSINIF ON TBLSINIF.SINIFID=TBLOGRENCILER.OGRSINIF WHERE OGRSINIF like '" + cmbsinif.SelectedValue + "%' ", conn);
-            OleDbDataAdapter da = new OleDbDataAdapter(ogrenciara);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            conn.Close();
+            frmizinreport frmizinreport = new frmizinreport();
+            frmizinreport.rol = "OGRENCI";
+            frmizinreport.Show();
         }
     }
 }

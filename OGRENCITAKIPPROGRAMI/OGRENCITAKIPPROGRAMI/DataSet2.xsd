@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OgrenciTakipDatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OgrenciTakipDatabaseConnectionString (Settings)" PropertyReference="ApplicationSettings.OGRENCITAKIPPROGRAMI.Properties.Settings.GlobalReference.Default.OgrenciTakipDatabaseConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OgrenciTakipDatabaseConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="TELEFONRAPORU" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="TELEFONRAPORU" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="TELEFONRAPORU">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TBLTELEFONKAYIT.TELID, TBLOGRENCILER.OGRADSOYAD, TBLTELEFONKAYIT.OGRNUMARATELEFON, TBLSINIF.SINIFAD, TBLTELEFONKAYIT.OGRTARIHTELEFON, TBLTELEFONKAYIT.OGRMAZERETTELEFON
+FROM            ((TBLTELEFONKAYIT INNER JOIN
+                         TBLSINIF ON TBLTELEFONKAYIT.OGRSINIFTELEFON = TBLSINIF.SINIFID) INNER JOIN
+                         TBLOGRENCILER ON TBLTELEFONKAYIT.OGRADSOYADTELEFON = TBLOGRENCILER.OGRID AND TBLSINIF.SINIFID = TBLOGRENCILER.OGRSINIF)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TELID" DataSetColumn="TELID" />
+              <Mapping SourceColumn="OGRADSOYAD" DataSetColumn="OGRADSOYAD" />
+              <Mapping SourceColumn="OGRNUMARATELEFON" DataSetColumn="OGRNUMARATELEFON" />
+              <Mapping SourceColumn="SINIFAD" DataSetColumn="SINIFAD" />
+              <Mapping SourceColumn="OGRTARIHTELEFON" DataSetColumn="OGRTARIHTELEFON" />
+              <Mapping SourceColumn="OGRMAZERETTELEFON" DataSetColumn="OGRMAZERETTELEFON" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet2" msprop:Generator_DataSetName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TELID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="TELID" msprop:Generator_ColumnPropNameInTable="TELIDColumn" msprop:Generator_ColumnVarNameInTable="columnTELID" msprop:Generator_UserColumnName="TELID" type="xs:int" minOccurs="0" />
+              <xs:element name="OGRADSOYAD" msprop:Generator_ColumnPropNameInRow="OGRADSOYAD" msprop:Generator_ColumnPropNameInTable="OGRADSOYADColumn" msprop:Generator_ColumnVarNameInTable="columnOGRADSOYAD" msprop:Generator_UserColumnName="OGRADSOYAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OGRNUMARATELEFON" msprop:Generator_ColumnPropNameInRow="OGRNUMARATELEFON" msprop:Generator_ColumnPropNameInTable="OGRNUMARATELEFONColumn" msprop:Generator_ColumnVarNameInTable="columnOGRNUMARATELEFON" msprop:Generator_UserColumnName="OGRNUMARATELEFON" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SINIFAD" msprop:Generator_ColumnPropNameInRow="SINIFAD" msprop:Generator_ColumnPropNameInTable="SINIFADColumn" msprop:Generator_ColumnVarNameInTable="columnSINIFAD" msprop:Generator_UserColumnName="SINIFAD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OGRTARIHTELEFON" msprop:Generator_ColumnPropNameInRow="OGRTARIHTELEFON" msprop:Generator_ColumnPropNameInTable="OGRTARIHTELEFONColumn" msprop:Generator_ColumnVarNameInTable="columnOGRTARIHTELEFON" msprop:Generator_UserColumnName="OGRTARIHTELEFON" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OGRMAZERETTELEFON" msprop:Generator_ColumnPropNameInRow="OGRMAZERETTELEFON" msprop:Generator_ColumnPropNameInTable="OGRMAZERETTELEFONColumn" msprop:Generator_ColumnVarNameInTable="columnOGRMAZERETTELEFON" msprop:Generator_UserColumnName="OGRMAZERETTELEFON" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

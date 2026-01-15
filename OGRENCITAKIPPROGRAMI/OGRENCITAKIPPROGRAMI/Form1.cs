@@ -75,7 +75,7 @@ namespace OGRENCITAKIPPROGRAMI
 
         private void lnkcikis_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Application.Exit();
+            MessageBox.Show("Bu program CENGİZ YILMAZ tarafından 2026 yılında yapılmıştır. Bilgi için muallimiturki@gmail.com adresine ileti gönderebilirsiniz.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

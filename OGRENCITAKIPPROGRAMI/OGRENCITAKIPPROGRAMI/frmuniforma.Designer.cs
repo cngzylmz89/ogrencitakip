@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,21 +55,15 @@
             this.lbladisoyadi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblmazeret = new System.Windows.Forms.Label();
+            this.lblannetelefon = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.lbluniformasiztarihi = new System.Windows.Forms.Label();
+            this.lblbabatelefno = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblensonuniformasiz = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbluniformasizsayisi = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OGRADSOYAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OGRNUMARA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OGRSINIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OGRIZINTARIH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OGRIZINALANKISI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer7 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
@@ -85,15 +79,8 @@
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
-            this.btnara = new System.Windows.Forms.Button();
-            this.btnizinkaydet = new System.Windows.Forms.Button();
+            this.btnkaydet = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OGRBABATELEFON = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OGRANNETELEFON = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -337,6 +324,7 @@
             this.pckbxogrenci.Margin = new System.Windows.Forms.Padding(0);
             this.pckbxogrenci.Name = "pckbxogrenci";
             this.pckbxogrenci.Size = new System.Drawing.Size(370, 329);
+            this.pckbxogrenci.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pckbxogrenci.TabIndex = 0;
             this.pckbxogrenci.TabStop = false;
             // 
@@ -374,6 +362,7 @@
             this.lblnumarasi.Size = new System.Drawing.Size(253, 59);
             this.lblnumarasi.TabIndex = 5;
             this.lblnumarasi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblnumarasi.TextChanged += new System.EventHandler(this.lblnumarasi_TextChanged);
             // 
             // label6
             // 
@@ -448,9 +437,9 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.lblmazeret, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lblannetelefon, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.label15, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lbluniformasiztarihi, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lblbabatelefno, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.label13, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.lblensonuniformasiz, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 1);
@@ -469,18 +458,18 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(716, 510);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // lblmazeret
+            // lblannetelefon
             // 
-            this.lblmazeret.AutoSize = true;
-            this.lblmazeret.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblmazeret.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblmazeret.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblmazeret.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblmazeret.Location = new System.Drawing.Point(361, 381);
-            this.lblmazeret.Name = "lblmazeret";
-            this.lblmazeret.Size = new System.Drawing.Size(352, 129);
-            this.lblmazeret.TabIndex = 8;
-            this.lblmazeret.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblannetelefon.AutoSize = true;
+            this.lblannetelefon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblannetelefon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblannetelefon.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblannetelefon.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblannetelefon.Location = new System.Drawing.Point(361, 381);
+            this.lblannetelefon.Name = "lblannetelefon";
+            this.lblannetelefon.Size = new System.Drawing.Size(352, 129);
+            this.lblannetelefon.TabIndex = 8;
+            this.lblannetelefon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label15
             // 
@@ -493,21 +482,21 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(352, 129);
             this.label15.TabIndex = 7;
-            this.label15.Text = "MAZERETİ:";
+            this.label15.Text = "ANNE TELEFON:";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbluniformasiztarihi
+            // lblbabatelefno
             // 
-            this.lbluniformasiztarihi.AutoSize = true;
-            this.lbluniformasiztarihi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbluniformasiztarihi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbluniformasiztarihi.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbluniformasiztarihi.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbluniformasiztarihi.Location = new System.Drawing.Point(361, 254);
-            this.lbluniformasiztarihi.Name = "lbluniformasiztarihi";
-            this.lbluniformasiztarihi.Size = new System.Drawing.Size(352, 127);
-            this.lbluniformasiztarihi.TabIndex = 6;
-            this.lbluniformasiztarihi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblbabatelefno.AutoSize = true;
+            this.lblbabatelefno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblbabatelefno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblbabatelefno.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblbabatelefno.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblbabatelefno.Location = new System.Drawing.Point(361, 254);
+            this.lblbabatelefno.Name = "lblbabatelefno";
+            this.lblbabatelefno.Size = new System.Drawing.Size(352, 127);
+            this.lblbabatelefno.TabIndex = 6;
+            this.lblbabatelefno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label13
             // 
@@ -520,7 +509,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(352, 127);
             this.label13.TabIndex = 5;
-            this.label13.Text = "ÜNİFORMASIZ GELDİĞİ TARİH:";
+            this.label13.Text = "BABA TELEFON:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblensonuniformasiz
@@ -580,79 +569,44 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Red;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Turquoise;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Cyan;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.OGRADSOYAD,
-            this.OGRNUMARA,
-            this.OGRSINIF,
-            this.OGRIZINTARIH,
-            this.OGRIZINALANKISI});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(1090, 333);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "SIRA NO";
-            this.ID.Name = "ID";
-            // 
-            // OGRADSOYAD
-            // 
-            this.OGRADSOYAD.HeaderText = "ÖĞRENCİ ADI SOYADI";
-            this.OGRADSOYAD.Name = "OGRADSOYAD";
-            // 
-            // OGRNUMARA
-            // 
-            this.OGRNUMARA.HeaderText = "OKUL NUMARASI";
-            this.OGRNUMARA.Name = "OGRNUMARA";
-            // 
-            // OGRSINIF
-            // 
-            this.OGRSINIF.HeaderText = "SINIFI";
-            this.OGRSINIF.Name = "OGRSINIF";
-            // 
-            // OGRIZINTARIH
-            // 
-            this.OGRIZINTARIH.HeaderText = "İZİN TARİHİ";
-            this.OGRIZINTARIH.Name = "OGRIZINTARIH";
-            // 
-            // OGRIZINALANKISI
-            // 
-            this.OGRIZINALANKISI.HeaderText = "ÖĞRENCİYİ ALAN KİŞİ";
-            this.OGRIZINALANKISI.Name = "OGRIZINALANKISI";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // splitContainer7
             // 
@@ -746,6 +700,7 @@
             this.rchnumara.Size = new System.Drawing.Size(197, 90);
             this.rchnumara.TabIndex = 9;
             this.rchnumara.Text = "";
+            this.rchnumara.TextChanged += new System.EventHandler(this.rchnumara_TextChanged);
             // 
             // label11
             // 
@@ -795,6 +750,7 @@
             this.rchadsoyad.Size = new System.Drawing.Size(197, 90);
             this.rchadsoyad.TabIndex = 7;
             this.rchadsoyad.Text = "";
+            this.rchadsoyad.TextChanged += new System.EventHandler(this.rchadsoyad_TextChanged);
             // 
             // cmbsinif
             // 
@@ -804,6 +760,7 @@
             this.cmbsinif.Name = "cmbsinif";
             this.cmbsinif.Size = new System.Drawing.Size(197, 21);
             this.cmbsinif.TabIndex = 10;
+            this.cmbsinif.SelectedValueChanged += new System.EventHandler(this.cmbsinif_SelectedValueChanged);
             // 
             // dateTimePicker1
             // 
@@ -812,6 +769,7 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(197, 20);
             this.dateTimePicker1.TabIndex = 16;
             this.dateTimePicker1.Value = new System.DateTime(2025, 11, 28, 14, 2, 7, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // splitContainer8
             // 
@@ -835,13 +793,12 @@
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.ColumnCount = 3;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.btnara, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.btnizinkaydet, 1, 0);
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btnkaydet, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -856,120 +813,71 @@
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.Image = global::OGRENCITAKIPPROGRAMI.Properties.Resources.icons8_Report_Card_64px;
-            this.button3.Location = new System.Drawing.Point(273, 3);
+            this.button3.Location = new System.Drawing.Point(206, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 105);
-            this.button3.TabIndex = 2;
+            this.button3.Size = new System.Drawing.Size(197, 105);
+            this.button3.TabIndex = 4;
             this.button3.Text = "RAPOR AL";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnara
+            // btnkaydet
             // 
-            this.btnara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnara.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnara.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnara.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnara.Image = global::OGRENCITAKIPPROGRAMI.Properties.Resources.icons8_search_64px;
-            this.btnara.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnara.Location = new System.Drawing.Point(3, 3);
-            this.btnara.Name = "btnara";
-            this.btnara.Size = new System.Drawing.Size(129, 105);
-            this.btnara.TabIndex = 0;
-            this.btnara.Text = "ARA";
-            this.btnara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnara.UseVisualStyleBackColor = false;
-            // 
-            // btnizinkaydet
-            // 
-            this.btnizinkaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.btnizinkaydet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnizinkaydet.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnizinkaydet.Image = global::OGRENCITAKIPPROGRAMI.Properties.Resources.icons8_insert_50px;
-            this.btnizinkaydet.Location = new System.Drawing.Point(138, 3);
-            this.btnizinkaydet.Name = "btnizinkaydet";
-            this.btnizinkaydet.Size = new System.Drawing.Size(129, 105);
-            this.btnizinkaydet.TabIndex = 1;
-            this.btnizinkaydet.Text = "GÜNÜ KAYDET";
-            this.btnizinkaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnizinkaydet.UseVisualStyleBackColor = false;
+            this.btnkaydet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnkaydet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnkaydet.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnkaydet.Image = global::OGRENCITAKIPPROGRAMI.Properties.Resources.icons8_insert_50px;
+            this.btnkaydet.Location = new System.Drawing.Point(3, 3);
+            this.btnkaydet.Name = "btnkaydet";
+            this.btnkaydet.Size = new System.Drawing.Size(197, 105);
+            this.btnkaydet.TabIndex = 3;
+            this.btnkaydet.Text = "GÜNÜ KAYDET";
+            this.btnkaydet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnkaydet.UseVisualStyleBackColor = false;
+            this.btnkaydet.Click += new System.EventHandler(this.btnkaydet_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Red;
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Red;
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.SeaShell;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.OGRBABATELEFON,
-            this.OGRANNETELEFON});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.EnableHeadersVisualStyles = false;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.Size = new System.Drawing.Size(406, 339);
             this.dataGridView2.TabIndex = 2;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "SIRA NO";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "ÖĞRENCİ ADI SOYADI";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "OKUL NUMARASI";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "SINIFI";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // OGRBABATELEFON
-            // 
-            this.OGRBABATELEFON.HeaderText = "BABA TELEFON";
-            this.OGRBABATELEFON.Name = "OGRBABATELEFON";
-            // 
-            // OGRANNETELEFON
-            // 
-            this.OGRANNETELEFON.HeaderText = "ANNE TELEFON";
-            this.OGRANNETELEFON.Name = "OGRANNETELEFON";
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // frmuniforma
             // 
@@ -980,6 +888,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmuniforma";
             this.Text = "ÜNİFORMA";
+            this.Load += new System.EventHandler(this.frmuniforma_Load);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -1048,21 +957,15 @@
         private System.Windows.Forms.Label lbladisoyadi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label lblmazeret;
+        private System.Windows.Forms.Label lblannetelefon;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lbluniformasiztarihi;
+        private System.Windows.Forms.Label lblbabatelefno;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblensonuniformasiz;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbluniformasizsayisi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OGRADSOYAD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OGRNUMARA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OGRSINIF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OGRIZINTARIH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OGRIZINALANKISI;
         private System.Windows.Forms.SplitContainer splitContainer7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label12;
@@ -1077,15 +980,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.SplitContainer splitContainer8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnara;
-        private System.Windows.Forms.Button btnizinkaydet;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OGRBABATELEFON;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OGRANNETELEFON;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnkaydet;
     }
 }

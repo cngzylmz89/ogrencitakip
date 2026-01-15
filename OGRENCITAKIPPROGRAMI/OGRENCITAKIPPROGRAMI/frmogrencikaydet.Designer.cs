@@ -55,6 +55,8 @@
             this.cmbsinif = new System.Windows.Forms.ComboBox();
             this.msknumara = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnraporal = new System.Windows.Forms.Button();
+            this.btnogrenciara = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -90,10 +92,12 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel3);
+            this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer1.Size = new System.Drawing.Size(1500, 900);
             this.splitContainer1.SplitterDistance = 49;
             this.splitContainer1.TabIndex = 2;
@@ -206,10 +210,12 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.splitContainer3);
+            this.splitContainer2.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer2.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer2.Size = new System.Drawing.Size(1500, 847);
             this.splitContainer2.SplitterDistance = 500;
             this.splitContainer2.TabIndex = 0;
@@ -224,12 +230,14 @@
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.Controls.Add(this.tableLayoutPanel1);
+            this.splitContainer3.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel2);
+            this.splitContainer3.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer3.Size = new System.Drawing.Size(500, 847);
-            this.splitContainer3.SplitterDistance = 585;
+            this.splitContainer3.SplitterDistance = 548;
             this.splitContainer3.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -259,14 +267,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 585);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 548);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // mskıd
             // 
             this.mskıd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mskıd.Enabled = false;
-            this.mskıd.Location = new System.Drawing.Point(253, 488);
+            this.mskıd.Location = new System.Drawing.Point(253, 458);
             this.mskıd.Mask = "00000";
             this.mskıd.Name = "mskıd";
             this.mskıd.Size = new System.Drawing.Size(244, 20);
@@ -280,9 +288,9 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(3, 485);
+            this.label3.Location = new System.Drawing.Point(3, 455);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(244, 100);
+            this.label3.Size = new System.Drawing.Size(244, 93);
             this.label3.TabIndex = 15;
             this.label3.Text = "ID:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,7 +298,7 @@
             // mskbabatelefon
             // 
             this.mskbabatelefon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mskbabatelefon.Location = new System.Drawing.Point(253, 391);
+            this.mskbabatelefon.Location = new System.Drawing.Point(253, 367);
             this.mskbabatelefon.Mask = "(999) 000-0000";
             this.mskbabatelefon.Name = "mskbabatelefon";
             this.mskbabatelefon.Size = new System.Drawing.Size(244, 20);
@@ -300,7 +308,7 @@
             // mskannetelefon
             // 
             this.mskannetelefon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mskannetelefon.Location = new System.Drawing.Point(253, 294);
+            this.mskannetelefon.Location = new System.Drawing.Point(253, 276);
             this.mskannetelefon.Mask = "(999) 000-0000";
             this.mskannetelefon.Name = "mskannetelefon";
             this.mskannetelefon.Size = new System.Drawing.Size(244, 20);
@@ -313,11 +321,10 @@
             this.rchadsoyad.Font = new System.Drawing.Font("Comic Sans MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rchadsoyad.Location = new System.Drawing.Point(253, 3);
             this.rchadsoyad.Name = "rchadsoyad";
-            this.rchadsoyad.Size = new System.Drawing.Size(244, 91);
+            this.rchadsoyad.Size = new System.Drawing.Size(244, 85);
             this.rchadsoyad.TabIndex = 10;
             this.rchadsoyad.Text = "";
             this.rchadsoyad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rchadsoyad_MouseClick);
-            this.rchadsoyad.TextChanged += new System.EventHandler(this.rchadsoyad_TextChanged);
             // 
             // label10
             // 
@@ -326,9 +333,9 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label10.Location = new System.Drawing.Point(3, 388);
+            this.label10.Location = new System.Drawing.Point(3, 364);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(244, 97);
+            this.label10.Size = new System.Drawing.Size(244, 91);
             this.label10.TabIndex = 9;
             this.label10.Text = "BABA TELEFON:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -340,9 +347,9 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label8.Location = new System.Drawing.Point(3, 291);
+            this.label8.Location = new System.Drawing.Point(3, 273);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(244, 97);
+            this.label8.Size = new System.Drawing.Size(244, 91);
             this.label8.TabIndex = 7;
             this.label8.Text = "ANNE TELEFON:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,9 +361,9 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label6.Location = new System.Drawing.Point(3, 194);
+            this.label6.Location = new System.Drawing.Point(3, 182);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(244, 97);
+            this.label6.Size = new System.Drawing.Size(244, 91);
             this.label6.TabIndex = 5;
             this.label6.Text = "NUMARASI:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -368,9 +375,9 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label4.Location = new System.Drawing.Point(3, 97);
+            this.label4.Location = new System.Drawing.Point(3, 91);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(244, 97);
+            this.label4.Size = new System.Drawing.Size(244, 91);
             this.label4.TabIndex = 3;
             this.label4.Text = "SINIFI:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,7 +391,7 @@
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(244, 97);
+            this.label2.Size = new System.Drawing.Size(244, 91);
             this.label2.TabIndex = 1;
             this.label2.Text = "ADI SOYADI:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -393,29 +400,29 @@
             // 
             this.cmbsinif.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbsinif.FormattingEnabled = true;
-            this.cmbsinif.Location = new System.Drawing.Point(253, 100);
+            this.cmbsinif.Location = new System.Drawing.Point(253, 94);
             this.cmbsinif.Name = "cmbsinif";
             this.cmbsinif.Size = new System.Drawing.Size(244, 21);
             this.cmbsinif.TabIndex = 11;
-            this.cmbsinif.SelectedValueChanged += new System.EventHandler(this.cmbsinif_SelectedValueChanged);
             // 
             // msknumara
             // 
             this.msknumara.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.msknumara.Location = new System.Drawing.Point(253, 197);
+            this.msknumara.Location = new System.Drawing.Point(253, 185);
             this.msknumara.Mask = "00000";
             this.msknumara.Name = "msknumara";
             this.msknumara.Size = new System.Drawing.Size(244, 20);
             this.msknumara.TabIndex = 12;
             this.msknumara.ValidatingType = typeof(int);
             this.msknumara.MouseClick += new System.Windows.Forms.MouseEventHandler(this.msknumara_MouseClick);
-            this.msknumara.TextChanged += new System.EventHandler(this.msknumara_TextChanged);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.btnraporal, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnogrenciara, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.button6, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
@@ -423,11 +430,44 @@
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(500, 258);
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(500, 295);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // btnraporal
+            // 
+            this.btnraporal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnraporal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnraporal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnraporal.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnraporal.Image = global::OGRENCITAKIPPROGRAMI.Properties.Resources.icons8_Report_Card_64px;
+            this.btnraporal.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnraporal.Location = new System.Drawing.Point(253, 199);
+            this.btnraporal.Name = "btnraporal";
+            this.btnraporal.Size = new System.Drawing.Size(244, 93);
+            this.btnraporal.TabIndex = 20;
+            this.btnraporal.Text = "RAPOR AL";
+            this.btnraporal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnraporal.UseVisualStyleBackColor = false;
+            this.btnraporal.Click += new System.EventHandler(this.btnraporal_Click);
+            // 
+            // btnogrenciara
+            // 
+            this.btnogrenciara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnogrenciara.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnogrenciara.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnogrenciara.Image = global::OGRENCITAKIPPROGRAMI.Properties.Resources.icons8_search_64px;
+            this.btnogrenciara.Location = new System.Drawing.Point(3, 199);
+            this.btnogrenciara.Name = "btnogrenciara";
+            this.btnogrenciara.Size = new System.Drawing.Size(244, 93);
+            this.btnogrenciara.TabIndex = 19;
+            this.btnogrenciara.Text = "ARA";
+            this.btnogrenciara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnogrenciara.UseVisualStyleBackColor = false;
+            this.btnogrenciara.Click += new System.EventHandler(this.btnogrenciara_Click);
             // 
             // button7
             // 
@@ -437,9 +477,9 @@
             this.button7.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button7.Image = global::OGRENCITAKIPPROGRAMI.Properties.Resources.icons8_available_updates_50px;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.Location = new System.Drawing.Point(253, 132);
+            this.button7.Location = new System.Drawing.Point(253, 101);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(244, 123);
+            this.button7.Size = new System.Drawing.Size(244, 92);
             this.button7.TabIndex = 4;
             this.button7.Text = "GÜNCELLE";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -454,9 +494,9 @@
             this.button6.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button6.Image = global::OGRENCITAKIPPROGRAMI.Properties.Resources.icons8_delete_60px;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button6.Location = new System.Drawing.Point(3, 132);
+            this.button6.Location = new System.Drawing.Point(3, 101);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(244, 123);
+            this.button6.Size = new System.Drawing.Size(244, 92);
             this.button6.TabIndex = 3;
             this.button6.Text = "SİL";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -473,7 +513,7 @@
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button3.Location = new System.Drawing.Point(253, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(244, 123);
+            this.button3.Size = new System.Drawing.Size(244, 92);
             this.button3.TabIndex = 2;
             this.button3.Text = "KAYDET";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -490,7 +530,7 @@
             this.btnara.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnara.Location = new System.Drawing.Point(3, 3);
             this.btnara.Name = "btnara";
-            this.btnara.Size = new System.Drawing.Size(244, 123);
+            this.btnara.Size = new System.Drawing.Size(244, 92);
             this.btnara.TabIndex = 1;
             this.btnara.Text = "LİSTELE";
             this.btnara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -546,7 +586,8 @@
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmogrencikaydet";
-            this.Text = "z";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Text = "ÖĞRENCİ KAYDET";
             this.Load += new System.EventHandler(this.frmogrencikaydet_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -602,5 +643,7 @@
         private System.Windows.Forms.MaskedTextBox msknumara;
         private System.Windows.Forms.MaskedTextBox mskıd;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnogrenciara;
+        private System.Windows.Forms.Button btnraporal;
     }
 }

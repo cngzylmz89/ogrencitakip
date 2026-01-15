@@ -363,6 +363,7 @@ namespace OGRENCITAKIPPROGRAMI
         private void button3_Click(object sender, EventArgs e)
         {
             frmizinreport frmizinreport = new frmizinreport();
+            frmizinreport.rol = "IZIN";
             frmizinreport.Show();
         }
     }
